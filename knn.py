@@ -32,7 +32,6 @@ def knn(data, k):
     X = area(data)
     size = [len(X[0]), len(X[1])]
     knnpdf = np.zeros(size)
-    n = data.shape[0]
     for i in range(size[0]):
         for j in range(size[1]):
             x = np.array([X[0][i],X[1][j]])

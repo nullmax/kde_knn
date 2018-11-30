@@ -1,2 +1,20 @@
 # kde_knn
-Kernel Density Estimate and KNN
+Kernel and KNN Density Estimate
+
+## requirements
+
+* python3.6
+* numpy
+* scipy
+* matplotlib
+
+## execution
+
+### kde(parzen window)
+```
+python kde.py
+```
+### knn
+```
+python knn.py
+```
