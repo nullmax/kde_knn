@@ -45,8 +45,7 @@ def knn(data, k):
                 knnpdf[i,j] = k/(n*v)
     return X, knnpdf
    
-# n_set = [1, 16, 256, 10000]
-n_set = [1, 16]
+n_set = [1, 16, 256, 10000]
 fig = plt.figure()
 pos = 1
 

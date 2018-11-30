@@ -25,7 +25,7 @@ def gaussian(x, mu, cov):
     return gauss.pdf(x)
 
 def area(data):
-    size = 40
+    size = 50
     X = []
     for i in range(data.shape[1]):
         x=np.linspace(-4, 4, size)
@@ -44,14 +44,11 @@ def kde(data, h):
     n = data.shape[0]
     for i in range(size[0]):
         for j in range(size[1]):
-            sum1 = 0
-            for k in range(n):
-                sum1 = sum1 + kernel([X[0][i],X[1][j]], data[k], h)
+            sum1 = np.sum(kernel([X[0][i],X[1][j]], data, h)) 
             kdepdf[i,j] = sum1/n
     return X, kdepdf
    
-# n_set = [1, 16, 256, 10000]
-n_set = [1, 16]
+n_set = [1, 16, 256, 10000]
 h1_set = [0.25, 1.0, 4.0]
 fig = plt.figure()
 
